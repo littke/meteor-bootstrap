@@ -4,6 +4,7 @@ Package.describe({
 
 Package.on_use(function (api) {
   api.add_files('js/bootstrap-dropdown.js', 'client');
+  api.add_files('js/bootstrap-tooltip.js', 'client');
   api.add_files('js/bootstrap-collapse.js', 'client');
   api.add_files('js/bootstrap-alert.js', 'client');
 });
