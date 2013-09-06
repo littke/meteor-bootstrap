@@ -281,6 +281,11 @@
 @gridGutterWidth1200:     30px;
 @gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
 
+// 1700px min
+@gridColumnWidth1700:     85px;
+@gridGutterWidth1700:     37px;
+@gridRowWidth1700:        (@gridColumns * @gridColumnWidth1700) + (@gridGutterWidth1700 * (@gridColumns - 1));
+
 // 768px-979px
 @gridColumnWidth768:      42px;
 @gridGutterWidth768:      20px;
@@ -295,6 +300,10 @@
 // 1200px min
 @fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
 @fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 1700px min
+@fluidGridColumnWidth1700:     percentage(@gridColumnWidth1700/@gridRowWidth1700);
+@fluidGridGutterWidth1700:     percentage(@gridGutterWidth1700/@gridRowWidth1700);
 
 // 768px-979px
 @fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
