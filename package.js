@@ -8,4 +8,5 @@ Package.on_use(function (api) {
   api.add_files('js/bootstrap-collapse.js', 'client');
   api.add_files('js/bootstrap-alert.js', 'client');
   api.add_files('js/bootstrap-typeahead.js', 'client');
+  api.add_files('js/bootstrap-affix.js', 'client');
 });
