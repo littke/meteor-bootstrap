@@ -103,9 +103,16 @@
 
   }
 
-  function clearMenus() {
+  function clearMenus(e) {
+    if(e && e.which === 3) return
+
     $(toggle).each(function () {
-      getParent($(this)).removeClass('open')
+      var $parent = getParent($(this))
+      if(!$parent.hasClass('open')) return
+      var relatedTarget = { relatedTarget: this }
+      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+      if (e.isDefaultPrevented()) return
+      $parent.removeClass('open').trigger('hidden.bs.dropdown', relatedTarget)
     })
   }
 
